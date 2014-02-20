@@ -58,8 +58,8 @@ class BenchMarkCommand extends Command
 
     private function loop(callable $case)
     {
-        foreach(range(0, 100000) as $run) {
+        foreach (range(0, 100000) as $run) {
             $case();
         }
     }
-} 
+}

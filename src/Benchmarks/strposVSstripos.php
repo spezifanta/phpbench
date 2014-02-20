@@ -13,4 +13,4 @@ class strposVSstripos
     {
         stripos('Bundle:Controller:Method', ':');
     }
-} 
+}

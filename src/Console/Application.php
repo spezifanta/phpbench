@@ -15,4 +15,4 @@ class Application extends \Symfony\Component\Console\Application
 
         $this->add(new BenchMarkCommand());
     }
-} 
+}

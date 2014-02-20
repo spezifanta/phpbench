@@ -29,4 +29,4 @@ class foreachVsKeyCurrent
         $a = key($testArray);
         $b = reset($testArray);
     }
-} 
+}
