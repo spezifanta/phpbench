@@ -48,11 +48,14 @@ class BenchMarkCommand extends Command
                 return ($a['duration'] <= $b['duration']) ? -1 : 1;
             });
 
+            $output->writeln('');
+
             for ($i = 0; $i < count($records); $i++) {
                 $output->writeln(sprintf(
-                    '%s::%s - %.3fms | %.2f%%',
+                    '%s::%s %s %07.3f ms | %.2f%%',
                     $testCase,
                     $records[$i]['method'],
+                    str_repeat(' ', 50 - strlen($testCase . '::' . $records[$i]['method'])),
                     round($records[$i]['duration'] * 1000, 3),
                     $records[$i]['duration'] / $records[0]['duration'] * 100
                 ));
