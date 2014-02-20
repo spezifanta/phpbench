@@ -30,10 +30,14 @@ class BenchMarkCommand extends Command
             $methods = $reflectionClass->getMethods(\ReflectionMethod::IS_PUBLIC);
 
             foreach ($methods as $method) {
+                if (substr($method->getName(), 0, 5) !== 'using') {
+                    continue;
+                }
+
                 $startTime = microtime(true);
                 $this->loop([new $class, $method->getName()]);
                 $timeTable[$reflectionClass->getShortName()][] = [
-                    'method' => $method->getName(),
+                    'method' => substr($method->getName(), 5),
                     'duration' => microtime(true) - $startTime,
                 ];
             }

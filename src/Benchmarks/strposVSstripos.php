@@ -4,12 +4,12 @@ namespace Bench\Benchmarks;
 
 class strposVSstripos
 {
-    public function caseA()
+    public function usingStrpos()
     {
         strpos('Bundle:Controller:Method', ':');
     }
 
-    public function caseB()
+    public function usingStripos()
     {
         stripos('Bundle:Controller:Method', ':');
     }

@@ -4,7 +4,7 @@ namespace Bench\Benchmarks;
 
 class foreachVsKeyCurrent
 {
-    public function caseA()
+    public function usingForeach()
     {
         $testArray = ['foo' => 'bar'];
 
@@ -14,7 +14,7 @@ class foreachVsKeyCurrent
         }
     }
 
-    public function caseB()
+    public function usingKeyAndCurrent()
     {
         $testArray = ['foo' => 'bar'];
 
@@ -22,7 +22,7 @@ class foreachVsKeyCurrent
         $b = current($testArray);
     }
 
-    public function caseC()
+    public function usingKeyAndReset()
     {
         $testArray = ['foo' => 'bar'];
 
