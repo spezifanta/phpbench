@@ -1,5 +1,17 @@
  {
+    "name": "qrt/phpbench",
+    "type": "project",
+    "description": "PHP Benchmark Tool",
+    "keywords": ["benchmark", "testing"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Kuhrt",
+            "email": "alex@qrt.de"
+        }
+    ],
     "require": {
+        "php": ">=5.3.3",
         "symfony/console": "2.5.*@dev",
         "symfony/stopwatch": "2.5.*@dev"
     },
@@ -7,5 +19,8 @@
         "psr-4": {
             "Bench\\": "src/"
         }
+    },
+    "config": {
+        "bin-dir": "bin"
     }
  }
